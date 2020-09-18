@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-button type="primary">btn</van-button>
+    user
   </div>
 </template>
 <script>
