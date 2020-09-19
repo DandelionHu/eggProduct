@@ -22,6 +22,7 @@
   </div>
 </template>
 <script>
+import { ArticleLists } from '@/api'
 export default {
   data () {
     return {
@@ -41,7 +42,10 @@ export default {
         }
       })
     },
-    onLoad () {},
+    async onLoad () {
+      const { returnValue: res } = await ArticleLists()
+      this.list = res
+    },
     handleDetail (id) {
       this.$router.push({
         path: '/article-detail',
